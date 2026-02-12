@@ -22,11 +22,62 @@ class Motorista(val nome: String){
 }
 */
 
-data class Pergunta( var pergunta: String,  var respostaCerta: Int )
+//data class Pergunta( var pergunta: String,  var respostaCerta: Int )
+
+// Getter(conseguir, recuperar) e Setter(alterar/Configurar)
+
+
+class Usuario(){
+
+    var nome: String = ""
+        get() {
+            println("get: $field")
+            return field.uppercase()
+        }
+        set(value) {
+           field = "set: $value"
+        }
+
+
+    var idade: Int = 0
+    var maiorIdade = false
+        get() = idade >= 18
+
+
+
+
+
+}
 
 
 
 fun main() {
+
+    val usuario = Usuario()
+    usuario.nome = "Vinicius"
+    usuario.idade = 34
+
+    println("nome: ${usuario.nome}")
+    println("idade: ${usuario.idade}")
+    println("maiorIdade: ${usuario.maiorIdade}")
+
+}")
+
+
+  /*  val pessoa = Pessoa()
+    pessoa.nome = "Talles"
+    pessoa.idade = 33
+*/
+
+/*    Desestruturação (Destructuring)
+    val (pergunta, resposta) = pergunta1  » seria o mesmo que a seguir:
+
+    val p = pergunta1.pergunta
+    val r = pergunta1.respostaCerta
+
+
+
+    CODIGO DESESTRUTURADO
     val pergunta1 = Pergunta("Qual a pergunta?", 1)
     val pergunta2 = Pergunta("Qual a pergunta?", 1)
 
@@ -35,18 +86,7 @@ fun main() {
     println(resposta)
 
 
-
-    /*    Desestruturação (Destructuring)
-    val (pergunta, resposta) = pergunta1  » seria o mesmo que a seguir:
-
-    val p = pergunta1.pergunta
-    val r = pergunta1.respostaCerta
-
-
     */
-
-
-
 
 //println(pergunta1 == pergunta2) // Elas vao ser diferentes pq cada um tem uma "identificação."
 
