@@ -27,7 +27,7 @@ class Motorista(val nome: String){
 // Getter(conseguir, recuperar) e Setter(alterar/Configurar)
 
 
-class Usuario(){
+/*class Usuario(){
 
     var nome: String = ""
         get() {
@@ -42,27 +42,59 @@ class Usuario(){
     var idade: Int = 0
     var maiorIdade = false
         get() = idade >= 18
+}*/
 
+
+    class Usuario{
+        fun salvarTelefones(vararg telefones: String){
+            for(telefone in telefones)
+                println("Salvando telefone: $telefone")
+        }
+
+    }
+
+fun main() {
+
+    val usuario = Usuario()
+    usuario.salvarTelefones(
+        "999 999 999",
+        " 999 999 999",
+        " 999 999 999",
+        " 999 999 999",
+        " 999 999 999",
+        " 999 999 999",
+        " 999 999 999",
+        " 999 999 999"
+    )
+
+/*
+val pesso = Pessoa()
+    pesso.salvarTelefone(
+        " 999 999 999",
+        " 999 999 999",
+        " 999 999 999",
+        " 999 999 999",
+        " 999 999 999",
+        " 999 999 999",
+        " 999 999 999",
+        " 999 999 999",
+        " 999 999 999"
+
+    )
+*/
 
 
 
 
 }
 
-
-
-fun main() {
-
-    val usuario = Usuario()
+   /* val usuario = Usuario()
     usuario.nome = "Vinicius"
     usuario.idade = 34
 
     println("nome: ${usuario.nome}")
     println("idade: ${usuario.idade}")
-    println("maiorIdade: ${usuario.maiorIdade}")
-
-}")
-
+    println("maiorIdade: ${usuario.maiorIdade}")*/
 
   /*  val pessoa = Pessoa()
     pessoa.nome = "Talles"
@@ -117,4 +149,3 @@ fun main() {
 
 
 
-}
