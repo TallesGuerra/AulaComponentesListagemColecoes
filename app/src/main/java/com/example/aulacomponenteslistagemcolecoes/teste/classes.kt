@@ -30,7 +30,25 @@ fun main() {
     val pergunta1 = Pergunta("Qual a pergunta?", 1)
     val pergunta2 = Pergunta("Qual a pergunta?", 1)
 
-    println(pergunta1 == pergunta2) // Elas vao ser diferentes pq cada um tem uma "identificação."
+    val (pergunta, resposta) = pergunta1
+    println(pergunta)
+    println(resposta)
+
+
+
+    /*    Desestruturação (Destructuring)
+    val (pergunta, resposta) = pergunta1  » seria o mesmo que a seguir:
+
+    val p = pergunta1.pergunta
+    val r = pergunta1.respostaCerta
+
+
+    */
+
+
+
+
+//println(pergunta1 == pergunta2) // Elas vao ser diferentes pq cada um tem uma "identificação."
 
 
 
